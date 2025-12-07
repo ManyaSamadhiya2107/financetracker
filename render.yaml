@@ -23,4 +23,4 @@ services:
     publishPath: frontend/dist
     envVars:
       - key: VITE_API_URL
-        value: https://finance-tracker-backend.onrender.com # update after backend deploy
+        value: https://financetracker-1-h8a4.onrender.com # update after backend deploy
