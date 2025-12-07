@@ -19,7 +19,7 @@ services:
     plan: starter
     repo: https://github.com/ManyaSamadhiya2107/financetracker
     branch: main
-    buildCommand: cd frontend && npm install && npm run build
+    buildCommand: cd frontend && npm ci && npm run build
     publishPath: frontend/dist
     envVars:
       - key: VITE_API_URL
