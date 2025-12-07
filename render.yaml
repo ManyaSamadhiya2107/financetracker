@@ -3,7 +3,7 @@ services:
     name: finance-tracker-backend
     env: node
     plan: starter
-    repo: https://github.com/<your-user>/<your-repo> # REPLACE with your GitHub repo URL
+    repo: https://github.com/ManyaSamadhiya2107/financetracker
     branch: main
     buildCommand: cd backend && npm install
     startCommand: cd backend && npm start
@@ -11,13 +11,13 @@ services:
       - key: NODE_ENV
         value: production
       - key: MONGODB_URI
-        value: <your-mongo-uri> # REPLACE with your MongoDB connection string
+        value: mongodb+srv://manyasamadhiya2004_db_user:m1a2n3y4a5@cluster0.ukxow3p.mongodb.net/?appName=Cluster0
 
   - type: static
     name: finance-tracker-frontend
     env: static
     plan: starter
-    repo: https://github.com/<your-user>/<your-repo> # REPLACE with your GitHub repo URL
+    repo: https://github.com/ManyaSamadhiya2107/financetracker
     branch: main
     buildCommand: cd frontend && npm install && npm run build
     publishPath: frontend/dist
