@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: finance-tracker-backend
+    env: node
+    plan: starter
+    repo: https://github.com/<your-user>/<your-repo> # REPLACE with your GitHub repo URL
+    branch: main
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        value: <your-mongo-uri> # REPLACE with your MongoDB connection string
+
+  - type: static
+    name: finance-tracker-frontend
+    env: static
+    plan: starter
+    repo: https://github.com/<your-user>/<your-repo> # REPLACE with your GitHub repo URL
+    branch: main
+    buildCommand: cd frontend && npm install && npm run build
+    publishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://finance-tracker-backend.onrender.com # update after backend deploy
