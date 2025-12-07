@@ -13,14 +13,14 @@ services:
       - key: MONGODB_URI
         value: mongodb+srv://manyasamadhiya2004_db_user:m1a2n3y4a5@cluster0.ukxow3p.mongodb.net/?appName=Cluster0
 
-  - type: static
+  - type: web
     name: finance-tracker-frontend
-    env: static
+    env: node
     plan: starter
     repo: https://github.com/ManyaSamadhiya2107/financetracker
     branch: main
-    buildCommand: cd frontend && npm ci && npm run build
-    publishPath: frontend/dist
+    buildCommand: npm install && cd frontend && npm ci && npm run build
+    startCommand: npm start
     envVars:
       - key: VITE_API_URL
         value: https://financetracker-1-h8a4.onrender.com

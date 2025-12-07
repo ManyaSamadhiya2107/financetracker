@@ -1,0 +1,14 @@
+{
+  "name": "financetracker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server-frontend.js",
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6"
+  }
+}
